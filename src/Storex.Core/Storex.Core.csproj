@@ -4,8 +4,10 @@
     <TargetFramework>net472</TargetFramework>
     <Title>STOCK-MAN SDK</Title>
     <Authors>SHINSEI ELECTRONICS</Authors>
-    <Version>1.0.0-rc3</Version>
-    <PackageReleaseNotes>1.0.0-rc3
+    <Version>1.0.0-rc4</Version>
+    <PackageReleaseNotes>1.0.0-rc4
+IRepositoryModule.RegisterAsync の戻り値の型を bool に変更しました。
+1.0.0-rc3
 IMode インターフェイスから幾つかのプロパティを削除しました。
 </PackageReleaseNotes>
     <Description>STOCK-MAN モジュール開発用パッケージです。</Description>
