@@ -53,9 +53,9 @@ namespace Storex
         /// <param name="secondaryLabel"><see cref="FindSecondaryLabels"/>　メソッドで検出し、ユーザーに確定された副ラベル。</param>
         /// <param name="captureDatas">アプリでワーク (被写体) から収集した全てのデータ。</param>
         /// <param name="tags">アプリでユーザーに指定された追加の文字列。</param>
-        /// <returns></returns>
+        /// <returns>成功した場合は <c>true</c>、ユーザーによる再試行が必要な場合は <c>false</c>。</returns>
         /// <exception cref="RepositoryModuleException">失敗した場合にアプリでエラーメッセージを表示する場合にスローします。</exception>
-        Task RegisterAsync(ILabel primaryLabel, ILabel secondaryLabel, CaptureData[] captureDatas, string[] tags);
+        Task<bool> RegisterAsync(ILabel primaryLabel, ILabel secondaryLabel, CaptureData[] captureDatas, string[] tags);
 
         /// <summary>
         /// データを保管・登録します。
@@ -65,9 +65,9 @@ namespace Storex
         /// <param name="captureDatas">アプリでワーク (被写体) から収集した全てのデータ。</param>
         /// <param name="tags">アプリでユーザーに指定された追加の文字列。</param>
         /// <param name="cancellationToken"></param>
-        /// <returns></returns>
+        /// <returns>成功した場合は <c>true</c>、ユーザーによる再試行が必要な場合は <c>false</c>。</returns>
         /// <exception cref="RepositoryModuleException">失敗した場合にアプリでエラーメッセージを表示する場合にスローします。</exception>
-        Task RegisterAsync(ILabel primaryLabel, ILabel secondaryLabel, CaptureData[] captureDatas, string[] tags, CancellationToken cancellationToken);
+        Task<bool> RegisterAsync(ILabel primaryLabel, ILabel secondaryLabel, CaptureData[] captureDatas, string[] tags, CancellationToken cancellationToken);
     }
 
     /// <summary>
