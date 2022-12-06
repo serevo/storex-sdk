@@ -20,7 +20,7 @@ namespace Storex
         public IReadOnlyList<byte> AdornedImage { get; }
 
         /// <summary>
-        /// 読み取った<see cref="Symbol"/>。<see cref="IMode.HasC3Label"/> が <c>true</c> の場合は <see cref="C3Label"/> に変換済みのインスタンスも含まれます。
+        /// 読み取った<see cref="Symbol"/> と、<see cref="C3Label"/> に変換済みのインスタンス。
         /// </summary>
         public IReadOnlyList<ILabelSource> LabelSources { get; }
 

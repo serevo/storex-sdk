@@ -33,7 +33,7 @@ namespace Storex
         /// <summary>
         /// 主ラベルを検出して返します。
         /// </summary>
-        /// <param name="labelSources">アプリで読み取った <see cref="Symbol"/>。<see cref="IMode.HasC3Label"/> が <c>true</c> の場合は <see cref="C3Label"/> に変換済みのインスタンスも含まれます。</param>
+        /// <param name="labelSources">アプリで読み取った <see cref="Symbol"/> と、<see cref="C3Label"/> に変換済みのインスタンス。</param>
         /// <returns></returns>
         ILabel FindPrimaryLabel(ILabelSource[] labelSources);
 
@@ -41,7 +41,7 @@ namespace Storex
         /// 副ラベルを検出して返します。
         /// </summary>
         /// <param name="primaryLabel"><see cref="FindPrimaryLabel"/>　で検出された主ラベル。</param>
-        /// <param name="labelSources">アプリで読み取った <see cref="Symbol"/>。<see cref="IMode.HasC3Label"/> が <c>true</c> の場合は <see cref="C3Label"/> に変換済みのインスタンスも含まれます。</param>
+        /// <param name="labelSources">アプリで読み取った <see cref="Symbol"/>と、<see cref="C3Label"/> に変換済みのインスタンス。</param>
         /// <returns></returns>
         ILabel[] FindSecondaryLabels(ILabel primaryLabel, ILabelSource[] labelSources);
 
