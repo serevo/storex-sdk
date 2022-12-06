@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Storex.CaptureResult" Collapsed="true">
+    <Position X="13" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAAAQAAABAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CaptureResult.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Storex.C3Label">
+    <Position X="2" Y="5.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAgAAwAAAAAAAAAEAAIAAAAAAgAAAAAA=</HashCode>
+      <FileName>C3Label.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Storex.C3Label1D">
+    <Position X="0.5" Y="9" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAgAIgAAAAAAAAAAAAIAAAAAAAAAAAAA=</HashCode>
+      <FileName>C3Label1D.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Storex.C3Label2D">
+    <Position X="3.25" Y="9" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAIgAAAAAAAAAAAAIAAAAAAAAAACAA=</HashCode>
+      <FileName>C3Label2D.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Storex.Symbol" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="10.75" Width="1.5" />
+    <Members>
+      <Property Name="IElement.PartNumber" Hidden="true" />
+      <Property Name="IElement.SerialNumber" Hidden="true" />
+      <Property Name="IElement.SymbolType" Hidden="true" />
+      <Property Name="PartNumber" Hidden="true" />
+      <Property Name="SerialNumber" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAwAIAAAAIAAEBQIAAAQAgAAAAAAA=</HashCode>
+      <FileName>Symbol.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Location" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Storex.SymbolLocation" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="7.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAAAAgAAAAAAAAAAAAIAAAAAAAAAIAAA=</HashCode>
+      <FileName>SymbolLocation.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="VertexPoints" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Storex.UserInfo" Collapsed="true">
+    <Position X="14.75" Y="1.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAACEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UserInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Storex.MainApp.ModuleException" Collapsed="true">
+    <Position X="14.75" Y="0.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ModuleException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Storex.MainApp.ZXingSupport.SymbolTypeExtensions" Collapsed="true">
+    <Position X="13" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SymbolTypeExtensions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="Storex.PointD" BaseTypeListCollapsed="true">
+    <Position X="10.5" Y="7.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAgAAAAAAAAAAAAIAAAAAAAAAAYiA=</HashCode>
+      <FileName>PointD.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Struct>
+  <Interface Name="Storex.IAuthenticationModule">
+    <Position X="0.75" Y="3" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>IAuthenticationModule.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Storex.ICaptureModule">
+    <Position X="7.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAQAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>ICaptureModule.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Storex.IMode" Collapsed="true">
+    <Position X="14.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAgAACAAIAAAAAIAAA=</HashCode>
+      <FileName>IMode.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Storex.IRepositoryModule">
+    <Position X="4.25" Y="3" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAQEAAAAAAAAABAAAAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>IRepositoryModule.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Storex.IElement" Collapsed="true">
+    <Position X="13" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAQAAAAAAAAAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IElement.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Storex.IModule">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>IModule.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="Storex.SymbolType" Collapsed="true">
+    <Position X="13" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAAAEBAAAAAAAAAAAAAAAAQAAAAAAABA=</HashCode>
+      <FileName>SymbolType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Yu Gothic UI" Size="9" />
+</ClassDiagram>
