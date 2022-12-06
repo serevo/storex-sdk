@@ -28,6 +28,7 @@ namespace Storex
         /// <param name="mode">選択されたモード。</param>
         /// <param name="user">認証されたユーザー。認証は省略可能な為 <c>null</c> が渡される場合があります。</param>
         /// <returns></returns>
+        /// <exception cref="RepositoryModuleException">失敗した場合にアプリでエラーメッセージを表示する場合にスローします。</exception>
         Task PrepareAsync(IMode mode, IUser user);
 
         /// <summary>
@@ -53,6 +54,7 @@ namespace Storex
         /// <param name="captureDatas">アプリでワーク (被写体) から収集した全てのデータ。</param>
         /// <param name="tags">アプリでユーザーに指定された追加の文字列。</param>
         /// <returns></returns>
+        /// <exception cref="RepositoryModuleException">失敗した場合にアプリでエラーメッセージを表示する場合にスローします。</exception>
         Task RegisterAsync(ILabel primaryLabel, ILabel secondaryLabel, CaptureData[] captureDatas, string[] tags);
 
         /// <summary>
@@ -64,6 +66,7 @@ namespace Storex
         /// <param name="tags">アプリでユーザーに指定された追加の文字列。</param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
+        /// <exception cref="RepositoryModuleException">失敗した場合にアプリでエラーメッセージを表示する場合にスローします。</exception>
         Task RegisterAsync(ILabel primaryLabel, ILabel secondaryLabel, CaptureData[] captureDatas, string[] tags, CancellationToken cancellationToken);
     }
 
