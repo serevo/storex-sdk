@@ -30,8 +30,8 @@ namespace Storex
 
         internal override Symbol[] GetSymbols() => Symbols.ToArray();
 
-        internal C3Label1D(IReadOnlyList<Symbol> symbols, string partNumber, int? quantity, string serialNumber, string venderCode)
-            : base(partNumber, quantity, serialNumber, venderCode)
+        internal C3Label1D(IReadOnlyList<Symbol> symbols, string partNumber, int? quantity, string serialNumber, string venderCode, string venderPartNumber)
+            : base(partNumber, quantity, serialNumber, venderCode, venderPartNumber)
         {
             Symbols = symbols ?? throw new ArgumentNullException(nameof(symbols));
 

@@ -29,6 +29,11 @@ namespace Storex
         public string VenderCode { get; }
 
         /// <summary>
+        /// 受注者品名コードを取得します。
+        /// </summary>
+        public string VenderPartNumber { get; }
+
+        /// <summary>
         /// シンボルの種類。
         /// </summary>
         public abstract SymbolType SymbolType { get; }
@@ -41,12 +46,13 @@ namespace Storex
 
         Symbol[] ILabel.Symbols => GetSymbols();
 
-        internal C3Label(string partNumber, int? quantity, string serialNumber, string venderCode)
+        internal C3Label(string partNumber, int? quantity, string serialNumber, string venderCode, string venderPartNumber)
         {
             PartNumber = partNumber ?? throw new ArgumentNullException(nameof(partNumber));
             Quantity = quantity;
             SerialNumber = serialNumber;
             VenderCode = venderCode;
+            VenderPartNumber = venderPartNumber;
         }
     }
 }

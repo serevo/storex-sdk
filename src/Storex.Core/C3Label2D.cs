@@ -29,8 +29,8 @@ namespace Storex
 
         internal override Symbol[] GetSymbols() => new[] { Symbol };
 
-        internal C3Label2D(Symbol symbol, string partNumber, int? quantity, string serialNumber, string venderCode)
-            : base(partNumber, quantity, serialNumber, venderCode)
+        internal C3Label2D(Symbol symbol, string partNumber, int? quantity, string serialNumber, string venderCode, string venderPartNumber)
+            : base(partNumber, quantity, serialNumber, venderCode, venderPartNumber)
         {
             Symbol = symbol ?? throw new ArgumentNullException(nameof(symbol));
 
