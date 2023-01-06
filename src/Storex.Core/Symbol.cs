@@ -18,7 +18,10 @@ namespace Storex
         /// </summary>
         public string Value { get; }
 
-        internal SymbolLocation Location { get; }
+        /// <summary>
+        /// ロケーション。
+        /// </summary>
+        public SymbolLocation Location { get; }
 
         IReadOnlyCollection<Symbol> ILabelSource.Symbols => Array.AsReadOnly(new[] { this });
 
@@ -35,7 +38,15 @@ namespace Storex
             Value = value;
         }
 
-        internal Symbol(SymbolType type, string value, SymbolLocation location)
+        /// <summary>
+        /// <see cref="Symbol"/> クラスの新しいインスタンスを初期化します。
+        /// </summary>
+        /// <param name="type"></param>
+        /// <param name="value"></param>
+        /// <param name="location"></param>
+        /// <exception cref="ArgumentNullException"></exception>
+        /// <exception cref="ArgumentOutOfRangeException"></exception>
+        public Symbol(SymbolType type, string value, SymbolLocation location)
             : this(type, value)
         {
             if (location is null)

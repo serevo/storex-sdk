@@ -24,17 +24,32 @@ namespace Storex
         /// </summary>
         public IReadOnlyList<ILabelSource> LabelSources { get; }
 
-        internal CaptureData(IReadOnlyList<byte> originalImage, IReadOnlyList<ILabelSource> labelSources)
+        /// <summary>
+        /// <see cref="CaptureData"/> クラスの新しいインスタンスを初期化します。
+        /// </summary>
+        /// <param name="originalImage"><see cref="OriginalImage"/></param>
+        /// <param name="labelSources"><see cref="LabelSources"/></param>
+        /// <exception cref="ArgumentNullException"></exception>
+        /// <exception cref="ArgumentOutOfRangeException"></exception>
+        public CaptureData(IReadOnlyList<byte> originalImage, IReadOnlyList<ILabelSource> labelSources)
         {
             OriginalImage = originalImage ?? throw new ArgumentNullException(nameof(originalImage));
 
             LabelSources = labelSources ?? throw new ArgumentNullException(nameof(labelSources));
 
             if (labelSources.Any(o => o is null))
-                throw new ArgumentOutOfRangeException(nameof(labelSources), "null が含まれています。");
+                throw new ArgumentOutOfRangeException(nameof(labelSources));
         }
 
-        internal CaptureData(IReadOnlyList<byte> originalImage, IReadOnlyList<byte> adornedImage, IReadOnlyList<ILabelSource> labelSources)
+        /// <summary>
+        /// <see cref="CaptureData"/> クラスの新しいインスタンスを初期化します。
+        /// </summary>
+        /// <param name="originalImage"></param>
+        /// <param name="adornedImage"></param>
+        /// <param name="labelSources"></param>
+        /// <exception cref="ArgumentNullException"></exception>
+        /// <exception cref="ArgumentOutOfRangeException"></exception>
+        public CaptureData(IReadOnlyList<byte> originalImage, IReadOnlyList<byte> adornedImage, IReadOnlyList<ILabelSource> labelSources)
             : this(originalImage, labelSources)
         {
             AdornedImage = adornedImage ?? throw new ArgumentNullException(nameof(adornedImage));
