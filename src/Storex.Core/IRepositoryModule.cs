@@ -28,7 +28,7 @@ namespace Storex
         /// <param name="mode">選択されたモード。</param>
         /// <param name="user">認証されたユーザー。認証は省略可能な為 <c>null</c> が渡される場合があります。</param>
         /// <returns></returns>
-        /// <exception cref="RepositoryModuleException">失敗した場合にアプリでエラーメッセージを表示する場合にスローします。</exception>
+        /// <exception cref="RepositoryModuleException">アプリでエラーメッセージを表示する場合にスローします。</exception>
         Task PrepareAsync(IMode mode, IUser user);
 
         /// <summary>
@@ -87,8 +87,7 @@ namespace Storex
         /// <see cref="RepositoryModuleException"/> クラスの新しいインスタンスを初期化します。
         /// </summary>
         /// <param name="displayMessage">アプリでエラーメッセージとしてユーザーに表示する文字列。</param>
-        /// <param name="exceptionMessage"><see cref="Exception.Message"/> を指定。省略された場合は <paramref name="displayMessage"/> が使用されます。</param>
-        public RepositoryModuleException(string displayMessage, string exceptionMessage = null) : base(displayMessage, exceptionMessage) { }
+        public RepositoryModuleException(string displayMessage) : base(displayMessage) { }
     }
 
     /// <summary>
