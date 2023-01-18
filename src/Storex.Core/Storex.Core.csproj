@@ -1,26 +1,12 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net472</TargetFramework>
-    <Title>STOCK-MAN SDK</Title>
-    <Authors>SHINSEI ELECTRONICS</Authors>
-    <Version>1.0.0-rc5</Version>
-    <PackageReleaseNotes>1.0.0-rc4
-IRepositoryModule.RegisterAsync の戻り値の型を bool に変更しました。
-1.0.0-rc3
-IMode インターフェイスから幾つかのプロパティを削除しました。
-</PackageReleaseNotes>
-    <Description>STOCK-MAN モジュール開発用パッケージです。</Description>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
-    <PackageReadmeFile>README.md</PackageReadmeFile>
-    <Company />
-    <Copyright>Copyright © 2022 SHINSEI ELECTRONICS CO,.LTD.</Copyright>
-    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
-    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
   </PropertyGroup>
 
   <ItemGroup>
-    <Reference Include="System.ComponentModel.Composition" />
+    <PackageReference Include="System.ComponentModel.Composition" Version="[4.6,8.0)" />
   </ItemGroup>
 
   <ItemGroup>
