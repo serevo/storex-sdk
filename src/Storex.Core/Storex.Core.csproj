@@ -2,7 +2,15 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <Title>STOCK-MAN SDK</Title>
+    <Authors>SHINSEI ELECTRONICS</Authors>
+    <Version>1.0.0-rc6</Version>
+    <Description>STOCK-MAN モジュール開発用パッケージです。</Description>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <Copyright>Copyright © 2022 SHINSEI ELECTRONICS CO,.LTD.</Copyright>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
   </PropertyGroup>
 
   <ItemGroup>
