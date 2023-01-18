@@ -27,9 +27,9 @@ namespace Storex
         /// </summary>
         /// <param name="mode">選択されたモード。</param>
         /// <param name="user">認証されたユーザー。認証は省略可能な為 <c>null</c> が渡される場合があります。</param>
-        /// <returns></returns>
+        /// <returns>完了した場合は <c>true</c>、そうでない場合は <c>false</c>。</returns>
         /// <exception cref="RepositoryModuleException">アプリでエラーメッセージを表示する場合にスローします。</exception>
-        Task PrepareAsync(IMode mode, IUser user);
+        Task<bool> PrepareAsync(IMode mode, IUser user);
 
         /// <summary>
         /// 主ラベルを検出して返します。
