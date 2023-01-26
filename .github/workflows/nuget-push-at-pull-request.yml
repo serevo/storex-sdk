@@ -3,8 +3,7 @@ name: Nuget Push at Pull-request
 on:
   pull_request:
     types: [opened, synchronize, reopened]
-    branches:
-      - main
+    branches: ['main']
 
 permissions:
   contents: read
@@ -42,8 +41,8 @@ jobs:
           dotnet pack --configuration Release --version-suffix pr.${{ env.pr_number }}.${{ github.run_number }}
 
       - name: Add GitHub Packages source to nuget.config
-        run: dotnet nuget add source --username USERNAME --password ${{ secrets.GITHUB_TOKEN }} --store-password-in-clear-text --name github "https://nuget.pkg.github.com/serevo/index.json"
+        run: dotnet nuget add source --name github "https://nuget.pkg.github.com/serevo/index.json"
       
       - name: Nuget Push to GitHub Packages
         working-directory: ./src/Storex.Core/bin/Release
-        run: dotnet nuget push "*.nupkg" --source "github"
+        run: dotnet nuget push "*.nupkg" --source "github" --api-key ${{ secrets.GITHUB_TOKEN }}
