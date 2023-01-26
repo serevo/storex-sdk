@@ -12,7 +12,6 @@ SHINSEI ELECTRONCS の STOCK-MAN アプリ用モジュールを開発するた�
 
 
 
-
 ## バージョニング
 
 この SDK は [SemVer (セマンティック バージョニング 2.0.0)](https://semver.org/lang/ja/) に則ってバージョニングしています。
