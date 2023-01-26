@@ -43,4 +43,3 @@ jobs:
       - name: Nuget Push to GitHub Packages
         working-directory: ./src/Storex.Core/bin/Release
         run: dotnet nuget push "Storex.Core.1.0.0-build-${{ github.run_number }}.nupkg" --source "github"
-
