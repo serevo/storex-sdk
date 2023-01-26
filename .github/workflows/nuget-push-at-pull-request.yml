@@ -29,10 +29,14 @@ jobs:
       - name: .NET Pack
         working-directory: ./src/Storex.Core
         run: |
-          dotnet pack Storex.Core.csproj -o artifacts/
-
+          dotnet pack Storex.Core.csproj --no-build --include-symbol --version-suffix rc7.1
+      #- name: .NET Pack
+      #  working-directory: ./src/Storex.Core
+      #  run: |
+      #    dotnet pack Storex.Core.csproj  -o artifacts/
       - name: Add GitHub Packages source to nuget.config
         run: dotnet nuget add source --username USERNAME --password ${{ secrets.GITHUB_TOKEN }} --store-password-in-clear-text --name github "https://nuget.pkg.github.com/OWNER/index.json"
       
-      - name: Nuget Publish to GitHub Packages
-        run: dotnet nuget push "bin/Release/OctocatApp.1.0.0.nupkg" --source "github"
+      - name: Nuget Push to GitHub Packages
+        working-directory: ./src/Storex.Core
+        run: dotnet nuget push "bin/Release/Storex.Core.1.0.0.nupkg" --source "github"
