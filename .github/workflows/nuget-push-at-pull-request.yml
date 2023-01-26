@@ -42,7 +42,7 @@ jobs:
           dotnet pack --configuration Release --version-suffix pr.${{ env.pr_number }}.${{ github.run_number }}
 
       - name: Add GitHub Packages source to nuget.config
-        run: dotnet nuget add source --username --name github "https://nuget.pkg.github.com/serevo/index.json"
+        run: dotnet nuget add source --name github "https://nuget.pkg.github.com/serevo/index.json"
       
       - name: Nuget Push to GitHub Packages
         working-directory: ./src/Storex.Core/bin/Release
