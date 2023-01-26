@@ -1,4 +1,4 @@
-name: Nuget Push to GitHub at Pull-request
+name: Nuget Push at Pull-request
 
 on:
   pull_request:
