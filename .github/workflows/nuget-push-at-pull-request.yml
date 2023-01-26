@@ -16,29 +16,23 @@ jobs:
         with:
           dotnet-version: '5.0.x'
 
-      - name: Install dependencies
+      - name: .NET Restore
         working-directory: ./src
         run: |
           dotnet restore
         
-      - name: Build
+      - name: .NET Build
         working-directory: ./src/Storex.Core
         run: |
           dotnet build --configuration Release --no-restore
       
-      - name: Pack
+      - name: .NET Pack
         working-directory: ./src/Storex.Core
         run: |
           dotnet pack Storex.Core.csproj -o artifacts/
 
-      - name: Add source to nuget.config
+      - name: Add GitHub Packages source to nuget.config
         run: dotnet nuget add source --username USERNAME --password ${{ secrets.GITHUB_TOKEN }} --store-password-in-clear-text --name github "https://nuget.pkg.github.com/OWNER/index.json"
-      #- uses: actions/upload-artifact@v1
-      #  with:
-      #    name: artifacts
-      #    path: artifacts
-
-      #- name: Publish to GitHub Packages
-      #  run: |
-      #      dotnet nuget add source --username USERNAME --password ${{ secrets.GITHUB_TOKEN }} --store-password-in-clear-text --name github "https://nuget.pkg.github.com/OWNER/index.json"
-      #      dotnet nuget push "bin/Release/OctocatApp.1.0.0.nupkg" --source "github"
+      
+      - name: Nuget Publish to GitHub Packages
+        run: dotnet nuget push "bin/Release/OctocatApp.1.0.0.nupkg" --source "github"
