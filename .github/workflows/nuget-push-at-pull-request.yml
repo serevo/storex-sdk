@@ -45,4 +45,4 @@ jobs:
       
       - name: Nuget Push to GitHub Packages
         working-directory: ./src/Storex.Core/bin/Release
-        run: dotnet nuget push "*.nupkg" --source "github" --api-key ${{ secrets.GITHUB_TOKEN }}
+        run: dotnet nuget push --source "github" --api-key ${{ secrets.GITHUB_TOKEN }} *.nupkg 
