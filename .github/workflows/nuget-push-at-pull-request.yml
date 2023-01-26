@@ -36,6 +36,7 @@ jobs:
         working-directory: ./src/Storex.Core
         run: |
           NUMBER=$(echo $GITHUB_REF | sed -e 's/[^0-9]//g')
+          echo NUMBER
           dotnet pack --configuration Release --version-suffix build-${{ github.run_number }}
 
       - name: Add GitHub Packages source to nuget.config
