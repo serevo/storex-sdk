@@ -1,4 +1,4 @@
-name: Nuget Push at Pull-request
+name: Nuget Push to GitHub Packages at Pull-request
 
 on:
   pull_request:
@@ -31,7 +31,7 @@ jobs:
         run: |
           dotnet build --configuration Release --no-restore
 
-      - name: Pull-request Number to GITHUB_ENV
+      - name: Set Pull-request number to GITHUB_ENV
         run : 
             echo "pr_number=$(echo $GITHUB_REF | sed -e 's/[^0-9]//g')" >> $GITHUB_ENV
 
@@ -40,7 +40,7 @@ jobs:
         run: |
           dotnet pack --configuration Release --version-suffix pr.${{ env.pr_number }}.${{ github.run_number }}
 
-      - name: Add GitHub Packages source to nuget.config
+      - name: Set GitHub Packages source to nuget.config
         run: dotnet nuget add source --name github "https://nuget.pkg.github.com/serevo/index.json"
       
       - name: Nuget Push to GitHub Packages
