@@ -5,6 +5,8 @@
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <VersionPrefix>1.0.0</VersionPrefix>
     <RepositoryUrl>https://github.com/serevo/storex-sdk</RepositoryUrl>
+    <Authors>serevo</Authors>
+    <Company>serevo</Company>
   </PropertyGroup>
 
   <ItemGroup>
