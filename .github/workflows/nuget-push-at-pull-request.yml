@@ -29,7 +29,7 @@ jobs:
       - name: .NET Pack
         working-directory: ./src/Storex.Core
         run: |
-          dotnet pack Storex.Core.csproj --no-build --include-symbol --version-suffix rc7.1
+          dotnet pack Storex.Core.csproj --no-build --version-suffix rc7.1
       #- name: .NET Pack
       #  working-directory: ./src/Storex.Core
       #  run: |
@@ -39,4 +39,4 @@ jobs:
       
       - name: Nuget Push to GitHub Packages
         working-directory: ./src/Storex.Core
-        run: dotnet nuget push "bin/Release/Storex.Core.1.0.0.nupkg" --source "github"
+        run: dotnet nuget push "bin/Release/Storex.Core.1.0.0-rc7.1.nupkg" --source "github"
