@@ -4,15 +4,6 @@ SHINSEI ELECTRONCS の STOCK-MAN アプリ用モジュールを開発するた�
 
 
 
-## API リファレンス
-
-SDK に含まれる API  のリファレンス マニュアルです。
-
-[API リファレンス | FuGet Gallery](https://www.fuget.org/packages/Storex.Core)
-
-
-
-
 ## サンプル
 
 この SDK を使用したモジュール開発を支援するためのサンプルです。
