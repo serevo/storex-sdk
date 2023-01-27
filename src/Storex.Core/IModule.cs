@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Storex
@@ -16,7 +17,8 @@ namespace Storex
         /// <summary>
         /// アプリでモジュール用設定ボタンが押下された場合に呼び出されます。
         /// </summary>
+        /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        Task ConfigureAsync();
+        Task ConfigureAsync(CancellationToken cancellationToken);
     }
 }
