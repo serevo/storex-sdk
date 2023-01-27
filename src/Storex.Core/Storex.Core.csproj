@@ -6,8 +6,8 @@
     <RepositoryUrl>https://github.com/serevo/storex-sdk</RepositoryUrl>
     <Title>STOCK-MAN SDK</Title>
     <Authors>SHINSEI ELECTRONICS</Authors>
-    <Description>STOCK-MAN SDK: STOCK-MAN (by SHINSEI ELECTRONCS) アプリ用モジュールを開発するための API のセットです。この SDK は SemVer (セマンティック バージョニング) 2.0.0 に則ってバージョニングしています。</Description>
-    <Version>1.0.0-rc7</Version>
+    <Description>STOCK-MAN SDK: STOCK-MAN アプリ用モジュールを開発するための API のセットです。この SDK は SemVer (セマンティック バージョニング) 2.0.0 に則ってバージョニングしています。</Description>
+    <Version>1.0.0-rc7.1</Version>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <Copyright>Copyright © 2023 SHINSEI ELECTRONICS CO,.LTD.</Copyright>
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
