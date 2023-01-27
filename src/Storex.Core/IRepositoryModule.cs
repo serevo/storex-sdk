@@ -36,21 +36,21 @@ namespace Storex
         /// </summary>
         /// <param name="labelSources">アプリで読み取った <see cref="Symbol"/> と、<see cref="C3Label"/> に変換済みのインスタンス。</param>
         /// <returns></returns>
-        ILabel FindPrimaryLabel(ILabelSource[] labelSources);
+        Task<ILabel> FindPrimaryLabelAsync(ILabelSource[] labelSources);
 
         /// <summary>
         /// 副ラベルを検出して返します。
         /// </summary>
-        /// <param name="primaryLabel"><see cref="FindPrimaryLabel"/>　で検出された主ラベル。</param>
+        /// <param name="primaryLabel"><see cref="FindPrimaryLabelAsync"/>　で検出された主ラベル。</param>
         /// <param name="labelSources">アプリで読み取った <see cref="Symbol"/>と、<see cref="C3Label"/> に変換済みのインスタンス。</param>
         /// <returns></returns>
-        ILabel[] FindSecondaryLabels(ILabel primaryLabel, ILabelSource[] labelSources);
+        Task<ILabel[]> FindSecondaryLabelsAsync(ILabel primaryLabel, ILabelSource[] labelSources);
 
         /// <summary>
         /// データを保管・登録します。
         /// </summary>
-        /// <param name="primaryLabel"><see cref="FindPrimaryLabel"/>　メソッドで検出された主ラベル。</param>
-        /// <param name="secondaryLabel"><see cref="FindSecondaryLabels"/>　メソッドで検出し、ユーザーに確定された副ラベル。</param>
+        /// <param name="primaryLabel"><see cref="FindPrimaryLabelAsync"/>　メソッドで検出された主ラベル。</param>
+        /// <param name="secondaryLabel"><see cref="FindSecondaryLabelsAsync"/>　メソッドで検出し、ユーザーに確定された副ラベル。</param>
         /// <param name="captureDatas">アプリでワーク (被写体) から収集した全てのデータ。</param>
         /// <param name="tags">アプリでユーザーに指定された追加の文字列。</param>
         /// <returns>成功した場合は <c>true</c>、ユーザーによる再試行が必要な場合は <c>false</c>。</returns>
@@ -60,8 +60,8 @@ namespace Storex
         /// <summary>
         /// データを保管・登録します。
         /// </summary>
-        /// <param name="primaryLabel"><see cref="FindPrimaryLabel"/>　メソッドで検出された主ラベル。</param>
-        /// <param name="secondaryLabel"><see cref="FindSecondaryLabels"/>　メソッドで検出し、ユーザーに確定された副ラベル。</param>
+        /// <param name="primaryLabel"><see cref="FindPrimaryLabelAsync"/>　メソッドで検出された主ラベル。</param>
+        /// <param name="secondaryLabel"><see cref="FindSecondaryLabelsAsync"/>　メソッドで検出し、ユーザーに確定された副ラベル。</param>
         /// <param name="captureDatas">アプリでワーク (被写体) から収集した全てのデータ。</param>
         /// <param name="tags">アプリでユーザーに指定された追加の文字列。</param>
         /// <param name="cancellationToken"></param>
