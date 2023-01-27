@@ -19,43 +19,36 @@ namespace Storex
         /// 動作モード (<see cref="IMode"/>) 設定でこのモジュール用の追加の設定ボタンが押下された場合に呼び出されます。
         /// </summary>
         /// <param name="mode"></param>
+        /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        Task ConfigureModeAsync(IMode mode);
+        Task ConfigureModeAsync(IMode mode, CancellationToken cancellationToken);
 
         /// <summary>
         /// アプリで ユーザーがモードを指定して操作を開始する際に一度だけ呼び出されます。
         /// </summary>
         /// <param name="mode">選択されたモード。</param>
         /// <param name="user">認証されたユーザー。認証は省略可能な為 <c>null</c> が渡される場合があります。</param>
+        /// <param name="cancellationToken"></param>
         /// <returns>完了した場合は <c>true</c>、そうでない場合は <c>false</c>。</returns>
         /// <exception cref="RepositoryModuleException">アプリでエラーメッセージを表示する場合にスローします。</exception>
-        Task<bool> PrepareAsync(IMode mode, IUser user);
+        Task<bool> PrepareAsync(IMode mode, IUser user, CancellationToken cancellationToken);
 
         /// <summary>
         /// 主ラベルを検出して返します。
         /// </summary>
         /// <param name="labelSources">アプリで読み取った <see cref="Symbol"/> と、<see cref="C3Label"/> に変換済みのインスタンス。</param>
+        /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        Task<ILabel> FindPrimaryLabelAsync(ILabelSource[] labelSources);
+        Task<ILabel> FindPrimaryLabelAsync(ILabelSource[] labelSources, CancellationToken cancellationToken);
 
         /// <summary>
         /// 副ラベルを検出して返します。
         /// </summary>
         /// <param name="primaryLabel"><see cref="FindPrimaryLabelAsync"/>　で検出された主ラベル。</param>
         /// <param name="labelSources">アプリで読み取った <see cref="Symbol"/>と、<see cref="C3Label"/> に変換済みのインスタンス。</param>
+        /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        Task<ILabel[]> FindSecondaryLabelsAsync(ILabel primaryLabel, ILabelSource[] labelSources);
-
-        /// <summary>
-        /// データを保管・登録します。
-        /// </summary>
-        /// <param name="primaryLabel"><see cref="FindPrimaryLabelAsync"/>　メソッドで検出された主ラベル。</param>
-        /// <param name="secondaryLabel"><see cref="FindSecondaryLabelsAsync"/>　メソッドで検出し、ユーザーに確定された副ラベル。</param>
-        /// <param name="captureDatas">アプリでワーク (被写体) から収集した全てのデータ。</param>
-        /// <param name="tags">アプリでユーザーに指定された追加の文字列。</param>
-        /// <returns>成功した場合は <c>true</c>、ユーザーによる再試行が必要な場合は <c>false</c>。</returns>
-        /// <exception cref="RepositoryModuleException">失敗した場合にアプリでエラーメッセージを表示する場合にスローします。</exception>
-        Task<bool> RegisterAsync(ILabel primaryLabel, ILabel secondaryLabel, CaptureData[] captureDatas, string[] tags);
+        Task<ILabel[]> FindSecondaryLabelsAsync(ILabel primaryLabel, ILabelSource[] labelSources, CancellationToken cancellationToken);
 
         /// <summary>
         /// データを保管・登録します。
