@@ -1,6 +1,6 @@
 # STOCK-MAN SDK
 
-[STOCK-MAN (by SHINSEI ELECTRONCS)](https://docs.serevo.net) アプリ用モジュールを開発するための API のセットです。
+[STOCK-MAN (by SHINSEI ELECTRONCS)](https://docs.serevo.net/stockman) アプリ用モジュールを開発するための API のセットです。
 
 
 ## バージョニング
