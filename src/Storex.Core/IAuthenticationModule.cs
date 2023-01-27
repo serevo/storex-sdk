@@ -13,13 +13,6 @@ namespace Storex
         /// <summary>
         /// モジュールでユーザー認証を実施します。
         /// </summary>
-        /// <returns></returns>
-        /// <exception cref="AuthenticationModuleException">失敗した場合にアプリでエラーメッセージを表示する場合にスローします。</exception>
-        Task<IUser> AuthenticateAsync();
-
-        /// <summary>
-        /// モジュールでユーザー認証を実施します。
-        /// </summary>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
         /// <exception cref="AuthenticationModuleException">失敗した場合にアプリでエラーメッセージを表示する場合にスローします。</exception>
