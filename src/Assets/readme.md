@@ -1,6 +1,7 @@
 # STOCK-MAN SDK
 
-[STOCK-MAN](https://docs.serevo.net/stockman) アプリ用モジュールを開発するための API のセットです。
+[STOCK-MAN](https://docs.serevo.net/stockman) (開発コードネーム: Storex) アプリ用モジュールを開発するための API のセットです。
+
 
 
 ## バージョニング
